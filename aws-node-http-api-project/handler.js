@@ -1,6 +1,6 @@
 module.exports.hello = async (event) => {
   let inputValue, outputValue
-  console.log("여기니?", event.body)
+  console.log(event.body)
 
   if (event.body) {
 
