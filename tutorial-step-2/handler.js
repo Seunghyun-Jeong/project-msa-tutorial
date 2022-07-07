@@ -44,7 +44,14 @@ const producer = async (event) => {
   };
 };
 
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
 const consumer = async (event) => {
+
+  await delay(5000)
+
   for (const record of event.Records) {
     console.log("Message Body: ", record.body);
 
